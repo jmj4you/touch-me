@@ -1,0 +1,13 @@
+{
+  "name": "Touch-Me",
+  "version": "0.0.1",
+  "author": "Joseph M J",
+  "email": "jmjonly4you@gmail.com",
+  "description": "Just an app fro multi player game",
+  "dependencies": {
+    "express": "^4.10.2",
+    "express-session": "^1.7.6",
+    "body-parser": "^1.7.0",
+    "socket.io": "^1.4.5"
+  }
+}

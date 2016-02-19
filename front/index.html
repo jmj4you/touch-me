@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <title>FIND ME GAME</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</head>
+<body style="font-family:Verdana">
+<div class="container">
+    <div class="row " style="padding-top:40px;">
+        <h3 class="text-center">FIND ME GAME</h3>
+        <br/><br/>
+
+        <div class="col-md-8">
+            <h2 id="game_waiting">Please wait... next user want to join..</h2>
+
+            <!--<h2 id="game_stopped">Game has finished..</h2>-->
+            <!--<button id="view_score_board" type="button" class="btn btn-info">SCORE BOARD</button>-->
+
+            <div id="game_wrapper" class="panel panel-info">
+                <div class="panel-heading"> FIND THIS NUMBER BELOW  <span style="float: right">Score: <b
+                        id="my_score_board">0</b></span>
+                </div>
+                <div class="panel-body">
+                    <div id="number_live" class="rand-number-display">55</div>
+                    <hr/>
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-body">
+                                <div id="game_numer_board" class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">7</button>
+                                    <button type="button" class="btn btn-default">8</button>
+                                    <button type="button" class="btn btn-default">9</button>
+                                    <button type="button" class="btn btn-default">10</button>
+                                </div>
+
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <p>Click on the button that you see above</p>
+
+                </div>
+            </div>
+
+            <div id="score_board_wrapper">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        SCORE BOARD
+                    </div>
+                    <div class="panel-body">
+                        <ul id="score_board_list" class="media-list"></ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    PLAYERS
+                </div>
+                <div class="panel-body">
+                    <ul id="add-user-section" class="media-list">
+
+                        <li class="media">
+
+                            <div class="media-body">
+
+                                <div class="media">
+                                    <div class="media-body">
+                                        <form id="user_form">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                       placeholder="Enter Your Name.."/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info" type="submit">ADD ME</button>
+                                    </span>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="user-list" class="media-list"></ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
